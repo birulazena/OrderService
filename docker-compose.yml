@@ -21,6 +21,7 @@ services:
       - DB_URL=jdbc:postgresql://postgres:5432/order_service_db
       - DB_USERNAME=order_service_username
       - DB_PASSWORD=order_service_password
+      - JWT_SECRET=KEysWF5PUPofYmqWaCLm2ohD8a+aAnSfKMp12bdMVUYcxeOHBUhEjPzn5LNiExB5px+Mg2gqVmzBxNEOyxSTOQ==
 
 volumes:
   order_db:
