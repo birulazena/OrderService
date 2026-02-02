@@ -1,6 +1,6 @@
 plugins {
 	java
-	id("org.springframework.boot") version "4.0.1"
+	id("org.springframework.boot") version "4.0.2"
 	id("io.spring.dependency-management") version "1.1.7"
 }
 
@@ -44,6 +44,10 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-data-jpa-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-liquibase-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
+	testImplementation("org.testcontainers:testcontainers-junit-jupiter:2.0.2")
+	testImplementation ("org.testcontainers:testcontainers-postgresql")
+	testImplementation("org.wiremock.integrations.testcontainers:wiremock-testcontainers-module:1.0-alpha-15")
+	testImplementation("org.wiremock:wiremock:3.13.1")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
