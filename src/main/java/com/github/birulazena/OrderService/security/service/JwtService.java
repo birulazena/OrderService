@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import javax.crypto.SecretKey;
 import java.nio.charset.StandardCharsets;
+import java.util.Date;
 
 @Service
 public class JwtService {
@@ -53,5 +54,15 @@ public class JwtService {
         } catch (Exception ex) {
             throw new InvalidTokenException(ex.getMessage());
         }
+    }
+
+    public String generateAdminAccessToken() {
+        return Jwts.builder()
+                .issuedAt(new Date())
+                .expiration(new Date(new Date().getTime() + 30 * 1000))
+                .claim("userId", -1L)
+                .claim("role", "ADMIN")
+                .signWith(secretKey)
+                .compact();
     }
 }
