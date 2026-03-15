@@ -32,6 +32,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.boot:spring-boot-starter-webclient")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
+	implementation("org.springframework.boot:spring-boot-starter-kafka")
 	implementation("io.github.resilience4j:resilience4j-spring-boot3:2.3.0")
 	implementation("io.jsonwebtoken:jjwt-api:0.13.0")
 	implementation("io.jsonwebtoken:jjwt-impl:0.13.0")
