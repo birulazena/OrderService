@@ -36,3 +36,4 @@ OrderServiceApplication
 
 ### VS Code ###
 .vscode/
+.env
