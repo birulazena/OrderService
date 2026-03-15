@@ -4,6 +4,12 @@ spring:
   jpa:
     generate-ddl: false
     show-sql: true
+  kafka:
+    consumer:
+      group-id: order-service-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 security:
   jwt:
     secret: ${JWT_SECRET}
